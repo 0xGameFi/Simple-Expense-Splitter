@@ -1,0 +1,11 @@
+# expense_splitter.py
+
+def split_expenses(expenses):
+    total = sum(expenses.values())
+    avg = total / len(expenses)
+    balances = {name: expense - avg for name, expense in expenses.items()}
+    return balances
+
+# Sample usage
+expenses = {"Alice": 50, "Bob": 30, "Charlie": 20}
+print(split_expenses(expenses))
